@@ -61,9 +61,16 @@ namespace _09_Portfolio
             return getValue;
         }
 
-        public static double TotalValue(Stock[] stocks)
+        public static double TotalValue(IAsset[] stocks)
         {
-            return stocks[0].GetValue() + stocks[1].GetValue();
+            double value = 0;
+
+            foreach (IAsset stock in stocks)
+            {
+                value += stock.GetValue();
+            }
+
+            return value;
         }
 
        
