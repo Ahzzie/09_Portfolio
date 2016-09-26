@@ -23,7 +23,7 @@ namespace _09_Portfolio
 
         public void ApplyInterest()
         {
-            throw new NotImplementedException();
+            Value *=  1 + (InterestRate / 100);
         }
 
         public double GetValue()
